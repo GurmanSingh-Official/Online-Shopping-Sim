@@ -5,7 +5,6 @@ class Items:
         self.prod = prod
         self.qty = qty 
         
-
 def input_check():
     product = input("Product Name: ").lower().strip()
     if product not in main.products.keys():
@@ -15,9 +14,11 @@ def input_check():
         print(f"{product.capitalize()} is available.")
         quantity = int(input("Product Quantity: "))
         p = Items(product, quantity) 
-        return p      
-items = input_check()
-print(items.prod.capitalize())
+        return p 
+    
+if __name__ == "__main__":   
+    pr = input_check()
+    
 
 
 
